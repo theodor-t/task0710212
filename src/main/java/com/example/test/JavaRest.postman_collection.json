@@ -1,0 +1,113 @@
+{
+  "info": {
+    "_postman_id": "7aa1a2e3-6af2-4438-b23c-a986c4b19cc3",
+    "name": "JavaRest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CreateProduct",
+      "id": "cb84a8da-a7b3-425c-a0f8-3336ad7df6d9",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Iphone 7\",\n    \"price\": 10,\n    \"weight\": 5\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/createproduct"
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateProduct",
+      "id": "9fcb68ac-8d90-497e-8036-a8f17d5de20f",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Iphone 12\",\n    \"price\": \"8\",\n    \"weight\": \"7\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/product/2"
+      },
+      "response": []
+    },
+    {
+      "name": "GetProduct",
+      "id": "d2446556-fc19-4dae-9ef5-9f5899730a78",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "http://localhost:8080/product/2"
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteProduct",
+      "id": "2fab3710-2cf9-4e10-9424-339e6e3ed716",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Greece",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://localhost:8080/product/1"
+      },
+      "response": []
+    },
+    {
+      "name": "GetProducts",
+      "id": "baac58d6-7b52-4514-9f50-2a0f2d84d6b2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "http://localhost:8080/products"
+      },
+      "response": []
+    }
+  ]
+}
