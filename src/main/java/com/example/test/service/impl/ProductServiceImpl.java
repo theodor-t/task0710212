@@ -35,6 +35,8 @@ public class ProductServiceImpl implements ProductService {
         Product existingProduct = productRepository.findById(id).orElseThrow(
                 ()-> new ResourceNotFoundException("Product", "id", id));
         existingProduct.setName(product.getName());
+        existingProduct.setPrice(product.getPrice());
+        existingProduct.setWeight(product.getWeight());
         productRepository.save(existingProduct);
         return existingProduct;
 
