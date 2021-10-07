@@ -1,37 +1,38 @@
-package controller;
+package com.example.test.controller;
 
-import model.Product;
+import com.example.test.model.Product;
 import org.springframework.web.bind.annotation.*;
-import service.ProductService;
+import com.example.test.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
 public class ProductController {
     private ProductService productService;
+
+
     public ProductController(ProductService productService){
         super();
         this.productService = productService;
     }
 
-    @PostMapping
+    @PostMapping("/createproduct")
     public ResponseEntity<Product> create(@RequestBody Product product){
         return new ResponseEntity<Product>(productService.save(product), HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/products")
     public List<Product> get(){
         return productService.getAll();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/product/{id}")
     public ResponseEntity<Product> get(@PathVariable("id") long id){
         return new ResponseEntity<Product>(productService.get(id), HttpStatus.OK);
     }
-    @PutMapping("{id}")
+    @PutMapping("/product/{id}")
     public ResponseEntity<Product> update(@PathVariable("id") long id,
                                           @RequestBody Product product ){
         return new ResponseEntity<Product>(productService.update(product, id), HttpStatus.OK);

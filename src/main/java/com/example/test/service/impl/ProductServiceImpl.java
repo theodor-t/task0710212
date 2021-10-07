@@ -1,10 +1,10 @@
-package service.impl;
+package com.example.test.service.impl;
 
-import exception.ResourceNotFoundException;
-import model.Product;
+import com.example.test.exception.ResourceNotFoundException;
+import com.example.test.model.Product;
 import org.springframework.stereotype.Service;
-import repository.ProductRepository;
-import service.ProductService;
+import com.example.test.repository.ProductRepository;
+import com.example.test.service.ProductService;
 
 import java.util.List;
 

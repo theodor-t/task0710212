@@ -1,6 +1,6 @@
-package service;
+package com.example.test.service;
 
-import model.Product;
+import com.example.test.model.Product;
 
 import java.util.List;
 
