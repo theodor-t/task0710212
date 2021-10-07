@@ -44,14 +44,14 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"Iphone 12\",\n    \"price\": \"8\",\n    \"weight\": \"7\"\n}",
+          "raw": "{\n    \"name\": \"Iphone X\",\n    \"price\": \"22\",\n    \"weight\": \"7\"\n}",
           "options": {
             "raw": {
               "language": "json"
             }
           }
         },
-        "url": "http://localhost:8080/product/2"
+        "url": "http://localhost:8080/product/4"
       },
       "response": []
     },
@@ -80,13 +80,7 @@
         "header": [],
         "body": {
           "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "name",
-              "value": "Greece",
-              "type": "text"
-            }
-          ]
+          "urlencoded": []
         },
         "url": "http://localhost:8080/product/1"
       },
